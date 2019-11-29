@@ -16,10 +16,18 @@
 """
 
 def ask_user():
-    """
-    Замените pass на ваш код
-    """
-    pass
+
+    my_dict = {
+        'question_1': 'answer_1',
+        'question_2': 'answer_2',
+    }
+
+    inp = input()
+
+    if my_dict.get(inp):
+        print(my_dict[inp])
+    else:
+        print('Wrong input')
     
 if __name__ == "__main__":
     ask_user()

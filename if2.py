@@ -15,12 +15,27 @@
 
 """
 
+
+def comparator(str1: str, str2: str) -> int:
+    if not (isinstance(str1, str) and (isinstance(str2, str))):
+        return 0;
+    if str1 == str2:
+        return 1
+    if len(str1) > len(str2):
+        return 2
+    if str2 == 'learn':
+        return 3
+    return -1
+
 def main():
-    """
-    Эта функция вызывается автоматически при запуске скрипта в консоли
-    В ней надо заменить pass на ваш код
-    """
-    pass
+
+    print(comparator(10, 'aaaa'))
+    print(comparator({}, []))
+    print(comparator('aaaa', 'aaaa'))
+    print(comparator('aaaaa', 'aaaa'))
+    print(comparator('aaaaa', 'learn'))
+    print(comparator('aaaa', 'aaaaaaa'))
+
     
 if __name__ == "__main__":
     main()
